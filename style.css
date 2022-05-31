@@ -97,6 +97,11 @@ p {
   font-size: 2rem;
 }
 
+.info-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .ver-mais {
   background: #ee2211;
   color: #fff;
@@ -152,4 +157,43 @@ p {
   background: #fff;
   text-align: center;
   padding: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+  .principal-vantagens {
+    grid-template-columns: 1fr;
+  }
+
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .topo {
+    gap: 30px;
+  }
+
+  .principal {
+    grid-template-columns: 1fr;
+  }
+
+  .info::before {
+    display: none;
+  }
+
+  .info {
+    text-align: left;
+    justify-items: start;
+  }
+
+  .subtitulo {
+    font-size: 3rem;
+  }
 }
