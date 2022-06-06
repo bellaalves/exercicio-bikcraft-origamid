@@ -1,3 +1,25 @@
+:root {
+  --cor-primaria: #ee2211;
+  --cor-primaria-escura: #900;
+  --cor-fundo-primaria: #f7f7f7;
+  --cor-fundo-secundaria: #fff;
+  --texto: #000;
+  --subtitulo: #c6c6c6;
+  -onda: url(./img/onda.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-primaria: #ee2211;
+    --cor-primaria-escura: #900;
+    --cor-fundo-primaria: #111111;
+    --cor-fundo-secundaria: #000;
+    --texto: #fff;
+    --subtitulo: rgba(255, 255, 255, 0.2);
+    --onda: url(./img/onda-escura.svg);
+  }
+}
+
 /* Estilos Gerais */
 
 body {
@@ -5,9 +27,10 @@ body {
   gap: 60px;
   justify-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f7f7f7;
+  background: var(--cor-fundo-primaria);
   margin: 0;
   margin-top: 60px;
+  color: var(--texto);
 }
 
 img {
@@ -51,9 +74,9 @@ p {
 }
 
 .menu-item a {
-  background: #ffffff;
+  background: var(--cor-fundo-secundaria);
   padding: 1rem 2rem;
-  color: #000;
+  color: var(--texto);
   text-transform: uppercase;
   border-radius: 4px;
   border: 2px solid #fff;
@@ -61,7 +84,7 @@ p {
 }
 
 .menu-item a:hover {
-  border-color: #ee2211;
+  border-color: var(--cor-primaria);
 }
 
 /* Conteúdo Principal */
@@ -77,7 +100,7 @@ p {
   content: "";
   width: 60px;
   height: 4px;
-  background: #ee2211;
+  background: var(--cor-primaria);
   position: absolute;
   top: 30px;
   right: -30px;
@@ -91,7 +114,7 @@ p {
   position: relative;
   text-align: right;
   padding: 40px;
-  background: #fff;
+  background: var(--cor-fundo-secundaria);
 }
 
 .info h1 {
@@ -104,31 +127,31 @@ p {
 }
 
 .ver-mais {
-  background: #ee2211;
-  color: #fff;
+  background: var(--cor-primaria);
+  color: #ffffff;
   padding: 1rem 2rem;
   text-transform: uppercase;
   border-radius: 4px;
 }
 
 .ver-mais:hover {
-  background: #900;
+  background: var(--cor-primaria-escura);
 }
 
 /* Subtítulo Vantagens Bikcraft */
 .subtitulo {
   font-size: 4rem;
-  color: #c6c6c6;
+  color: var(--subtitulo);
   padding: 40px;
   text-align: right;
   text-transform: uppercase;
   align-self: center;
-  background-image: url(./img/onda.svg);
+  background-image: var(--onda);
 }
 
 /* Vantagens Itens */
 .vantagens {
-  background: #fff;
+  background: var(--cor-fundo-secundaria);
   padding: 40px;
 }
 
@@ -144,18 +167,18 @@ p {
 }
 
 .vantagens-item:nth-child(odd) {
-  background: #f7f7f7;
+  background: var(--cor-fundo-primaria);
 }
 
 .vantagens-item:hover {
-  border-left: 4px solid #ee2211;
+  border-left: 4px solid var(--cor-primaria);
 }
 
 /* Rodapé */
 .rodape {
   box-sizing: border-box;
   width: 100%;
-  background: #fff;
+  background: var(--cor-fundo-secundaria);
   text-align: center;
   padding: 40px;
 }
